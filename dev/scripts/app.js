@@ -11,6 +11,8 @@ import About from './About';
 import SignIn from './SignIn';
 import Contact from './Contact';
 import MyBrands from './MyBrands';
+import UserInputText from './UserInputText'
+import UserLogoIcon from "./UserLogoIcon";
 
 
 import {
@@ -61,6 +63,8 @@ class App extends React.Component {
               <Route path="/mybrands" exact component={MyBrands} />
               <Route path="/signin" exact component={SignIn} />
               <Route path="/contact" exact component={Contact} /> 
+              <Route path="/UserInputText" exact component={UserInputText} /> 
+               <Route path="/UserLogoIcon" exact component={UserLogoIcon} /> 
             </div>
           <Footer />
         </div>

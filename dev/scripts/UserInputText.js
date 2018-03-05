@@ -1,99 +1,175 @@
 import React from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 //inside the home component 
 
 // input text your company
 // input text your keywords
 
+//55555555555555555555555555555555
+
 
 class UserInputText extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            icons: [],
-            query1: '',
-            query2: '',
-            query3: '',
-            searchQueries: []
-        };
-        this.handleChange = this.handleChange.bind(this);
-        this.searchIcons = this.searchIcons.bind(this);
-        this.onClick = this.onClick.bind(this);
-        this.runAxiosRequest = this.runAxiosRequest.bind(this);
-    }
-    componentDidMount() {
+constructor() {
+    super();
+    this.state = {
+      icons: [],
+      query: "",
+      icons2: [],
+      query2: "",
+      icons3: [],
+      query3: "",
+      companyName:""
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.searchIcons = this.searchIcons.bind(this);
+    this.searchIcons2 = this.searchIcons2.bind(this);
+    this.searchIcons3 = this.searchIcons3.bind(this);
+  }
 
-    }
+  handleChange(e) {
+    this.setState({
+      [e.target.id]: e.target.value
+    });
+  }
 
-    handleChange(e) {
-        e.preventDefault();
+  searchIcons() {
+    const query = this.state.query;
+    axios
+      .get("https://brandit2018.herokuapp.com/v1/", {
+        params: {
+          url: `icons/${this.state.query}`,
+          params: JSON.stringify({
+          })
+        }
+      })
+      .then(({ data }) => {
+        console.log(data.icons);
+      const iconsState = [];
+      for (let i = 0; i < 2; i++) {
+      iconsState.push(data.icons[Math.floor(Math.random() * data.icons.length)]);
         this.setState({
-            [e.target.id]: e.target.value
+          icons: iconsState,
+          query: ""
         });
-    }
+      }});
+  }
 
-    onClick(e) {
-        e.preventDefault();
-        this.state.searchQueries.push(this.state.query1, this.state.query2, this.state.query3);
-        this.runAxiosRequest();
-    }
-
-    //map over the newly populated searchQueries array, to pull out the queries so we can pass them
-    //into the searchIcons function as a query below.
-    runAxiosRequest() {
-        this.finalIcons = this.state.searchQueries.map((query) => {
-            this.searchIcons(query);
+  searchIcons2() {
+    const query = this.state.query2;
+    axios
+      .get("https://brandit2018.herokuapp.com/v1/", {
+        params: {
+          url: `icons/${this.state.query2}`,
+          params: JSON.stringify({
+            // limit: 2
+          })
+        }
+      })
+      .then(({ data }) => {
+        console.log(data.icons);
+         const iconsState = [];
+      for (let i = 0; i < 2; i++) {
+      iconsState.push(data.icons[Math.floor(Math.random() * data.icons.length)]);
+        this.setState({
+          icons2: iconsState,
+          query2: ""
         });
-    }
+      }});
+  }
 
-    //create a function to run the API request passing in each query
-    searchIcons(query) {
-        axios.get("https://brandit2018.herokuapp.com/v1/", {
-            params: {
-                url: `icons/${query}`,
-                params: JSON.stringify({
-                    limit: 2
-                })
-            }// once we recieve the data, map over it to pull out the individual icons and push
-            //them onto the icons empty array.
-        }).then(({ data }) => {
-            console.log(data);
-            data.icons.map((icon) => {
-                this.state.icons.push(icon);
-            }); //then set the state
-            this.setState({
-                icons: this.state.icons
-            });
+  searchIcons3() {
+    const query = this.state.query3;
+    axios
+      .get("https://brandit2018.herokuapp.com/v1/", {
+        params: {
+          url: `icons/${this.state.query3}`,
+          params: JSON.stringify({
+          })
+        }
+      })
+      .then(({ data }) => {
+        console.log(data.icons);
+         const iconsState = [];
+      for (let i = 0; i < 2; i++) {
+      iconsState.push(data.icons[Math.floor(Math.random() * data.icons.length)]);
+        this.setState({
+          icons3: iconsState,
+          query3: ""
         });
-    }
+      }});
+  }
 
-    render() {
-        return (
-            <div>
-                <p>hello header</p>
+  handleSubmit(e) {
+    e.preventDefault();
+    this.searchIcons();
+    this.searchIcons2();
+    this.searchIcons3();
+  }
 
-                <form onSubmit={this.onClick}>
 
-                    <label htmlFor="query1"></label>
-                    <input type="search" value={this.state.query1} placeholder="tag 1" onChange={this.handleChange} id="query1" required />
 
-                    <label htmlFor="query2"></label>
-                    <input type="search" value={this.state.query2} placeholder="tag 2" onChange={this.handleChange} id="query2" required />
+  render() {
+    return <div className="wrapper">
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor="query">Your Company Name: </label>
+          <input type="text" value={this.state.companyName} onChange={this.handleChange} id="companyName" required />
 
-                    <label htmlFor="query3"></label>
-                    <input type="search" value={this.state.query3} placeholder="tag 3" onChange={this.handleChange} id="query3" required />
+          <label htmlFor="query">Your key words: </label>
+          <input type="search" value={this.state.query} onChange={this.handleChange} id="query" required />
+          <input type="search" value={this.state.query2} onChange={this.handleChange} id="query2" required />
+          <input type="search" value={this.state.query3} onChange={this.handleChange} id="query3" required />
+          <input type="submit" value="Search for Icons" />
+        </form>
 
-                    <input type="submit" value="Search for Icons" />
-                </form>
+        <Link to={
+            {
+                pathname: '/UserLogoIcon',
 
-                {this.state.icons.map(icon => {
-                    return <SingleIcon icon={icon} key={icon.id} />;
-                })}
+                state: {  icons: this.state.icons,
+                        query: this.state.query,
+                        icons2: this.state.icons2,
+                        query2: this.state.query2,
+                        icons3: this.state.icons3,
+                        query3: this.state.query3,
+                        companyName: this.state.companyName }
 
-            </div>
-        )
-    }
+            }}>
+         <button>next page</button>
+        </Link>
+
+        {/* {this.state.icons.map(icon => {
+          return <SingleIcon icon={icon} key={icon.id} />;
+        })}
+
+        {this.state.icons.map(icon => {
+          // return <Link to={`/choices/${icon.id}`}>Create Idea</Link>;
+          return <Link to={`/choices/${icon.id}`}>Create Idea</Link>;
+
+        })}
+
+        {this.state.icons2.map(icon => {
+          return <SingleIcon icon={icon} key={icon.id} />;
+        })}
+
+        {this.state.icons2.map(icon => {
+          return <Link to={`/choices/${icon.id}`}>Create Idea</Link>;
+        })}
+
+        {this.state.icons3.map(icon => {
+          return <SingleIcon icon={icon} key={icon.id} />;
+        })}
+
+        {this.state.icons3.map(icon => {
+          // return <Link to={`/choices/${icon.id}`}>Create Idea</Link>;
+          return <Link to={`/choices/${icon.id}`}>Create Idea</Link>;
+        })} */}
+      </div>;
+  }
 }
 
 export default UserInputText;
