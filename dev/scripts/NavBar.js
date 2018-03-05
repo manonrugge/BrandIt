@@ -13,7 +13,7 @@ import {
 } from 'react-router-dom';
 
 
-const navBar = () => {
+const navBar = (props) => {
     return (
        
         <div className="mainHeader">
@@ -29,20 +29,29 @@ const navBar = () => {
                 </ul>
             </nav>
             <nav className="nav-right">
+                {props.loggedIn ?
                 <ul>
                     <li>
                         <Link to="/mybrands">My Brands</Link>
                     </li>
                     <li>
-                        <Link to="/signin">Sign In</Link> 
-                    </li>
-                    <li>
-                        <Link to="/signout">Sign Out</Link>
+                        <a href="" onClick={() => firebase.auth().signOut()}>Sign Out</a>
+
                     </li>
                     <li>
                         <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
+                :
+                <ul>
+                    <li>
+                        <Link to="/signin">Sign In</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contact</Link>
+                    </li>
+                </ul>
+                }
             </nav>  
          
         </div>
