@@ -1,10 +1,11 @@
 import React from "react";
-import MyBrands from './MyBrands';
-import Home from './Home';
+import Home from "./Home";
+
+
 
 // signin popup
 
-class SignIn extends React.Component {
+class SignOut extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -17,7 +18,7 @@ class SignIn extends React.Component {
     }
     componentDidMount() {
         //setting up google authentication
-        this.unsubscribe = firebase.auth().onAuthStateChanged((response) => {
+        firebase.auth().onAuthStateChanged((response) => {
             // console.log(response);
             if (response) {
                 this.setState({
@@ -33,12 +34,7 @@ class SignIn extends React.Component {
         })
     }
 
-    componentWillUnmount() {
-        this.unsubscribe();
-    }
-
     signIn() {
-        console.log("signing In!");
         //creating a new instance of google auth provider
         const provider = new firebase.auth.GoogleAuthProvider();
         provider.setCustomParameters({
@@ -52,7 +48,8 @@ class SignIn extends React.Component {
     }
 
     signOut() {
-        firebase.auth().signOut();
+        // console.log("Sign out working!");
+        
         this.setState({
             loggedIn: false
         })
@@ -63,12 +60,14 @@ class SignIn extends React.Component {
             <div className="signin-container">
                 <div className="signin">
                     {this.state.loggedIn ?
-                        <Home loggedIn={this.state.loggedIn} />
+                        <div>
+                            <h1>Hello!</h1>
+                            <a href=""></a>
+                            <button onClick={this.signOut}>Sign Out</button>
+                        </div>
                         :
                         <div>
-                            <h1>Brand It</h1>
-                            <h4>Please sign in:</h4>
-                            <button onClick={this.signIn}>Google</button>
+                            <Home />
                         </div>
                     }
                 </div>
@@ -77,4 +76,4 @@ class SignIn extends React.Component {
     }
 };
 
-export default SignIn;
+export default SignOut;
