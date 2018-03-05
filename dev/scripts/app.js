@@ -11,6 +11,8 @@ import About from './About';
 import SignIn from './SignIn';
 import Contact from './Contact';
 import MyBrands from './MyBrands';
+import UserInputText from './UserInputText'
+import UserLogoIcon from "./UserLogoIcon";
 
 
 import {
@@ -38,13 +40,28 @@ class App extends React.Component {
  constructor() {
    super()
    this.state = {
-    //  signIn: false
+     loggedIn: false,
+     user: {}
 
    }
  }
 
  componentDidMount() {
-
+    //setting up google authentication
+    firebase.auth().onAuthStateChanged((response) => {
+      // console.log(response);
+      if (response) {
+        this.setState({
+          loggedIn: true,
+          user: response
+        })
+      } else {
+        this.setState({
+          loggedIn: false,
+          user: {}
+        })
+      }
+    })
  } 
  
   render() {
@@ -54,15 +71,16 @@ class App extends React.Component {
         <div>
             <div className="app-container">
               {/* <NavBar signIn={this.state.signIn}/> */}
-              <NavBar />
+            <NavBar loggedIn={this.state.loggedIn}/>
               {/* Adding paths to different "pages" */}
               <Route path="/" exact component={Home} />
               <Route path="/about" exact component={About} />
               <Route path="/mybrands" exact component={MyBrands} />
               <Route path="/signin" exact component={SignIn} />
               <Route path="/contact" exact component={Contact} /> 
+              <Route path="/UserInputText" exact component={UserInputText} /> 
+               <Route path="/UserLogoIcon" exact component={UserLogoIcon} /> 
             </div>
-          <Footer />
         </div>
       </Router>
     );
