@@ -11,6 +11,7 @@ $body: 'Helvetica', sans-serif;
 @import "partials/navBar.scss";
 @import "partials/links.scss";
 @import "partials/footer.scss";
+@import "./node_modules/react-image-slider/lib/image-slider.css";
 
 body {
     background-color: white;

@@ -1,3 +1,4 @@
+@import url(./node_modules/react-image-slider/lib/image-slider.css);
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 

@@ -13,7 +13,7 @@ class Home extends React.Component {
         return (
             <div className="home-container">
                 <div className="home">
-                    <Gallery />
+                    {/* <Gallery /> */}
                     <img src="./dev/assets/brandit-logo.svg" alt="" />
                     <h2>Brandit</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta tenetur necessitatibus, explicabo doloremque ab eos dolorem id velit obcaecati optio saepe reprehenderit facere provident nisi quos alias harum illum distinctio?</p>
