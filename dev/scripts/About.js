@@ -10,6 +10,7 @@ class About extends React.Component {
                     <H2Text className={'mainFont'} text={'About BrandIt!!!'} />
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore sequi ipsa quibusdam corrupti, unde a, nesciunt provident illo laborum maiores fuga officiis cum rerum maxime officia aperiam, qui inventore. Voluptates?</p>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore sequi ipsa quibusdam corrupti, unde a, nesciunt provident illo laborum maiores fuga officiis cum rerum maxime officia aperiam, qui inventore. Voluptates?</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </div>
         )
