@@ -132,7 +132,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .mainHeader {
-  margin: 20px 50px; }
+  margin: 20px 50px;
+  height: 20px; }
 
 .nav-left {
   float: left; }
@@ -175,6 +176,12 @@ li {
 .myBrands,
 .contact {
   padding: 100px; }
+  @media (max-width: 500px) {
+    .home,
+    .about,
+    .myBrands,
+    .contact {
+      padding: 50px 0; } }
 
 .copyright {
   padding: 20px 0px;
@@ -252,8 +259,16 @@ li {
   .home {
     padding: 50px; } }
 
+@media (max-width: 500px) {
+  .home {
+    padding: 0; } }
+
 .log-in-launch {
   padding: 100px; }
+  @media (max-width: 500px) {
+    .log-in-launch {
+      padding: 50px 0;
+      text-align: center; } }
 
 .contact-container {
   margin: 0 auto; }
@@ -313,6 +328,9 @@ li {
 
 .slider {
   max-width: 100%; }
+  @media (max-width: 500px) {
+    .slider {
+      width: 100%; } }
   .slider img {
     width: 100%;
     height: auto; }
@@ -382,17 +400,24 @@ li {
   margin: 0 auto;
   text-align: center;
   height: 100vh; }
-  @media (max-width: 450px) {
+  @media (max-width: 720px) {
     .UserInputColorContainer {
       width: 80%;
-      padding-top: 20px; } }
+      padding-top: 50px; } }
 
 .content-container {
   float: left;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  padding-top: 85px; }
+  @media (max-width: 715px) {
+    .content-container {
+      padding-top: 200px; } }
+  @media (max-width: 480px) {
+    .content-container {
+      padding-top: 460px; } }
 
 .link-container {
   position: absolute;
@@ -418,7 +443,8 @@ li {
     .uitWrapper form label {
       width: 100%;
       margin: 0 auto;
-      float: left; }
+      float: left;
+      font-size: 24px; }
     .uitWrapper form input[type="text"] {
       width: 100%;
       float: left;
@@ -436,10 +462,11 @@ li {
         float: left; }
     .uitWrapper form .btnHolder {
       text-align: center;
-      width: 100%; }
+      width: 100%;
+      padding-top: 50px; }
       .uitWrapper form .btnHolder input[type="submit"] {
         width: 200px;
-        height: 25px; }
+        height: 35px; }
   .uitWrapper .linkContainer {
     width: 5%;
     float: left;
@@ -541,7 +568,7 @@ li {
   .tshirt-container .tshirt,
   .stationary-container .tshirt {
     width: 700px;
-    padding-left: 0; }
+    padding-left: 100px; }
     @media (max-width: 750px) {
       .tshirt-container .tshirt,
       .stationary-container .tshirt {
@@ -566,8 +593,8 @@ li {
 
 .logoMark-container-tshirt {
   width: 200px;
-  top: 350px;
-  left: 400px; }
+  top: 300px;
+  left: 275px; }
   @media (max-width: 500px) {
     .logoMark-container-tshirt {
       position: static;
@@ -646,8 +673,12 @@ li {
     left: 47px;
     top: 40px; }
 
+.btnHolder {
+  margin: 0 auto; }
+
 .userLogoMark-container {
-  padding: 200px; }
+  padding-left: 10%;
+  margin-top: 10%; }
 
 .logo-01-mark,
 .logo-02-mark,
@@ -699,6 +730,23 @@ li {
   .logo-03 img {
     width: 100%; }
 
+.label-logoMark {
+  display: block;
+  margin: 20px;
+  float: left;
+  text-align: center; }
+  .label-logoMark:hover {
+    transform: scale(1.05);
+    transition: all .5s ease-in-out; }
+
+input.checked[type="radio"] {
+  visibility: hidden; }
+
+.userLogoMark-container .link-btn {
+  display: block;
+  margin: 0 auto;
+  clear: both; }
+
 body {
   background-color: white; }
 
@@ -715,7 +763,8 @@ h1, h2 {
   border: 2px solid #809dc4; }
   @media (max-width: 500px) {
     .app-container {
-      height: 100vh; } }
+      height: 100vh;
+      border: none; } }
 
 h3 {
   text-align: center;
@@ -749,7 +798,7 @@ button {
 .about-container,
 .contact-container,
 .myBrands-container,
-.uitWrapper, .uliWrapper, .signin {
+.uitWrapper, .uliWrapper, .signin, .userLogoMark-container {
   height: 100vh; }
 
 .about {
@@ -884,14 +933,25 @@ button {
   .home {
     padding: 50px; } }
 
+@media (max-width: 500px) {
+  .home {
+    padding: 0; } }
+
 .home,
 .about,
 .myBrands,
 .contact {
   padding: 100px; }
+  @media (max-width: 500px) {
+    .home,
+    .about,
+    .myBrands,
+    .contact {
+      padding: 50px 0; } }
 
 .userLogoMark-container {
-  padding: 200px; }
+  padding-left: 10%;
+  margin-top: 10%; }
 
 .logo-01-mark,
 .logo-02-mark,
@@ -943,6 +1003,23 @@ button {
   .logo-03 img {
     width: 100%; }
 
+.label-logoMark {
+  display: block;
+  margin: 20px;
+  float: left;
+  text-align: center; }
+  .label-logoMark:hover {
+    transform: scale(1.05);
+    transition: all .5s ease-in-out; }
+
+input.checked[type="radio"] {
+  visibility: hidden; }
+
+.userLogoMark-container .link-btn {
+  display: block;
+  margin: 0 auto;
+  clear: both; }
+
 .tshirt-container,
 .stationary-container {
   position: relative; }
@@ -955,7 +1032,7 @@ button {
   .tshirt-container .tshirt,
   .stationary-container .tshirt {
     width: 700px;
-    padding-left: 0; }
+    padding-left: 100px; }
     @media (max-width: 750px) {
       .tshirt-container .tshirt,
       .stationary-container .tshirt {
@@ -980,8 +1057,8 @@ button {
 
 .logoMark-container-tshirt {
   width: 200px;
-  top: 350px;
-  left: 400px; }
+  top: 300px;
+  left: 275px; }
   @media (max-width: 500px) {
     .logoMark-container-tshirt {
       position: static;
@@ -1060,8 +1137,12 @@ button {
     left: 47px;
     top: 40px; }
 
+.btnHolder {
+  margin: 0 auto; }
+
 .mainHeader {
-  margin: 20px 50px; }
+  margin: 20px 50px;
+  height: 20px; }
 
 .nav-left {
   float: left; }
@@ -1234,9 +1315,16 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .log-in-launch {
   padding: 100px; }
+  @media (max-width: 500px) {
+    .log-in-launch {
+      padding: 50px 0;
+      text-align: center; } }
 
 .slider {
   max-width: 100%; }
+  @media (max-width: 500px) {
+    .slider {
+      width: 100%; } }
   .slider img {
     width: 100%;
     height: auto; }
@@ -1306,17 +1394,24 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   margin: 0 auto;
   text-align: center;
   height: 100vh; }
-  @media (max-width: 450px) {
+  @media (max-width: 720px) {
     .UserInputColorContainer {
       width: 80%;
-      padding-top: 20px; } }
+      padding-top: 50px; } }
 
 .content-container {
   float: left;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  padding-top: 85px; }
+  @media (max-width: 715px) {
+    .content-container {
+      padding-top: 200px; } }
+  @media (max-width: 480px) {
+    .content-container {
+      padding-top: 460px; } }
 
 .link-container {
   position: absolute;
@@ -1342,7 +1437,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     .uitWrapper form label {
       width: 100%;
       margin: 0 auto;
-      float: left; }
+      float: left;
+      font-size: 24px; }
     .uitWrapper form input[type="text"] {
       width: 100%;
       float: left;
@@ -1360,10 +1456,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
         float: left; }
     .uitWrapper form .btnHolder {
       text-align: center;
-      width: 100%; }
+      width: 100%;
+      padding-top: 50px; }
       .uitWrapper form .btnHolder input[type="submit"] {
         width: 200px;
-        height: 25px; }
+        height: 35px; }
   .uitWrapper .linkContainer {
     width: 5%;
     float: left;

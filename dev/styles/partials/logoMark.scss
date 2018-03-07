@@ -1,5 +1,6 @@
 .userLogoMark-container {
-    padding: 200px;
+     padding-left: 10%;
+     margin-top: 10%;
 }
 
 .logo-01-mark,
@@ -59,4 +60,25 @@
     img {
         width: 100%;
     }
+}
+
+.label-logoMark {
+    display: block;
+    margin: 20px;
+    float: left;
+    text-align: center;
+    &:hover{
+        transform: scale(1.05);
+        transition: all .5s ease-in-out;
+    }
+}
+
+input.checked[type="radio"]{
+    visibility:hidden;
+}
+
+.userLogoMark-container .link-btn {
+    display: block;
+    margin: 0 auto;
+    clear: both;
 }

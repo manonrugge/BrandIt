@@ -11,6 +11,7 @@
             width: 100%;
             margin: 0 auto;
             float: left;
+            font-size: 24px;
         }
 
         input[type="text"] {
@@ -41,10 +42,11 @@
         .btnHolder {
             text-align: center;
             width: 100%;
+            padding-top: 50px;
 
         input[type="submit"] {
             width: 200px;
-            height: 25px;
+            height: 35px;
         }
 
     }

@@ -69,21 +69,21 @@ class UserLogoMark extends React.Component {
         return (
             <div className="userLogoMark-container">
                 <form onSubmit={this.handleSubmit}>
-                    <label>
+                    <label className="label-logoMark">
                         <LogoMarkOne choice={this.state.choice} name={this.state.name} color={this.state.color} />
-                        <input type="radio" value="option1" onChange={this.handleChange} checked={this.state.logoStyle === "option1"} />
+                        <input className="checked" type="radio" checked value="option1" onChange={this.handleChange} checked={this.state.logoStyle === "option1"} />
                     </label>
-                    <label>
+                    <label className="label-logoMark">
                         <LogoMarkTwo choice={this.state.choice} name={this.state.name} color={this.state.color} />
-                        <input type="radio" value="option2" onChange={this.handleChange} checked={this.state.logoStyle === "option2"} />
+                        <input className="checked" type="radio" checked value="option2" onChange={this.handleChange} checked={this.state.logoStyle === "option2"} />
                     </label>
-                    <label>
+                    <label className="label-logoMark">
                         <LogoMarkThree choice={this.state.choice} name={this.state.name} color={this.state.color} />
-                        <input type="radio" value="option3" onChange={this.handleChange} checked={this.state.logoStyle === "option3"} />
+                        <input className="checked" type="radio" checked value="option3" onChange={this.handleChange} checked={this.state.logoStyle === "option3"} />
                     </label>
-                    <input type="submit" value="Choose an Icon" />
+                    <input type="submit" value="Choose an Icon" className="link-btn"/>
                 </form>
-                <div className="linkContainer">
+                <div className="link-container">
                     <Link to={
                             {
                                 pathname: "/UserMockUp",
