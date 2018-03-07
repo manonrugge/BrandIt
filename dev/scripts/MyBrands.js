@@ -15,7 +15,7 @@ class MyBrands extends React.Component {
     }
     componentDidMount() {
         const userId = firebase.auth().currentUser.uid;
-        const dbref = firebase.database().ref(`/users/${userId}/finalChoice`);
+        const dbref = firebase.database().ref(`/users/${userId}/choice`);
         dbref.on("value", snapshot => {
             const data = snapshot.val();
             console.log(data);
@@ -24,7 +24,7 @@ class MyBrands extends React.Component {
             });
         });
 
-        const dbref2 = firebase.database().ref(`/users/${userId}/finalName`);
+        const dbref2 = firebase.database().ref(`/users/${userId}/name`);
         dbref2.on("value", snapshot => {
             const data = snapshot.val();
             console.log(data);
@@ -32,7 +32,7 @@ class MyBrands extends React.Component {
                 name: data
             });
         });
-        const dbref3 = firebase.database().ref(`/users/${userId}/finalLogo`);
+        const dbref3 = firebase.database().ref(`/users/${userId}/logo`);
         dbref3.on("value", snapshot => {
             const data = snapshot.val();
             console.log(data);
@@ -41,7 +41,7 @@ class MyBrands extends React.Component {
             });
         });
 
-        const dbref4 = firebase.database().ref(`/users/${userId}/finalColor`);
+        const dbref4 = firebase.database().ref(`/users/${userId}/color`);
         dbref4.on("value", snapshot => {
             const data = snapshot.val();
             console.log(data);

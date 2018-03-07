@@ -330,7 +330,7 @@ li {
   max-width: 100%; }
   @media (max-width: 500px) {
     .slider {
-      width: 100%; } }
+      width: 95%; } }
   .slider img {
     width: 100%;
     height: auto; }
@@ -1324,7 +1324,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   max-width: 100%; }
   @media (max-width: 500px) {
     .slider {
-      width: 100%; } }
+      width: 95%; } }
   .slider img {
     width: 100%;
     height: auto; }
