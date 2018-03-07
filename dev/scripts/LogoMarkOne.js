@@ -11,7 +11,7 @@ const LogoMarkOne = (props) => {
             <div className="logo-01-icon">
                 <img src={props.choice} alt="" />
             </div>
-            <h3>{props.name}</h3>
+            <h3 className ={props.color} >{props.name}</h3>
         </div>
     )
 }

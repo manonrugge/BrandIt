@@ -74,7 +74,7 @@ class App extends React.Component {
         <div>
             <div className="app-container">
               {/* <NavBar signIn={this.state.signIn}/> */}
-            <NavBar loggedIn={this.state.loggedIn}/>
+              <NavBar loggedIn={this.state.loggedIn}/>
               {/* Adding paths to different "pages" */}
               <Route path="/" exact component={Home} />
               <Route path="/about" exact component={About} />

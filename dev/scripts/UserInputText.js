@@ -154,9 +154,9 @@ class UserInputText extends React.Component {
             pathname: "/UserLogoIcon",
             state: { icons: this.state.icons, query: this.state.query, icons2: this.state.icons2, query2: this.state.query2, icons3: this.state.icons3, query3: this.state.query3, companyName: this.state.companyName }
           }}>
-            <button>
+            
               <img src="./dev/assets/arrow.svg" alt="" />
-            </button>
+            
           </Link>
         </div>
         : null}
@@ -171,5 +171,3 @@ export default UserInputText;
 
 //  {this.state.logoState === true && this.state.logoStyle === "option1" ?  : null;
 //  }
-
-

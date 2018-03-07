@@ -1,11 +1,21 @@
 .contact-container {
     margin: 0 auto;
+     @media (max-width: 850px) {
+         padding-top: 60px;
+     }
 }
 
 .contact {
-    max-width: 100%;
+    width: 100%;
     vertical-align: middle;
     margin: 0 auto;
+    @media (max-width: 850px) {
+        padding:  0 !important;
+        margin: 0 auto;
+        text-align: center;
+        top: 50%;
+        
+    }
 }
 
 .contact-map iframe {
@@ -21,6 +31,9 @@
 
 .contact-map {
     float: right;
+    @media (max-width: 850px) {
+        display: none;
+    }
 }
 
 .contact-text {
@@ -32,6 +45,13 @@
     }
     @media (max-width: 950px) {
         padding-right: 100px;
+    }
+    @media (max-width: 850px) {
+        padding-right: 0;
+        max-width: 100%;
+        float: none;
+        margin: 0 auto;
+        text-align: center;
     }
 }
 

@@ -18,3 +18,23 @@
     vertical-align: middle;
     margin: 0 auto;
 }
+
+.orange-button {
+    background-color: #e59319 !important;
+}
+
+@media (max-width: 960px) {
+    .home-left, .home-right {
+    width: 100%;
+    display: inline-block;
+    }
+    .home-right {
+        padding-top: 20px;
+    }
+    .home-left {
+        text-align: center;
+    }
+    .home {
+        padding: 50px;
+    }
+}

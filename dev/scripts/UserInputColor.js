@@ -16,6 +16,15 @@ class UserInputColor extends React.Component {
     }
 
     componentDidMount() {
+        const userId = firebase.auth().currentUser.uid;
+        const dbref = firebase
+            .database()
+            .ref(`/users/${userId}/name`);
+        dbref.on("value", snapshot => {
+            const data = snapshot.val();
+            console.log(data);
+            this.setState({ name: data });
+        });
         // here is anything we want to happen after the component renders - like grab our AJAX data
     }
 
@@ -40,30 +49,30 @@ class UserInputColor extends React.Component {
         return (
             <div className="UserInputColorContainer wrapper">
                 <form action="" className="colorForm" onSubmit={this.colorSubmit} className="content-container">
-                    <H2Text className={'mainFont'} text={'Select a Font Color'} />
+                    <H2Text className={'mainFont'} text={'Select a Font Color for your Company Title'} />
                     <div className="mainColor">
                         <div className="radio main-color-div">
                             <label htmlFor="layoutOne" className="btn-color layout-one"></label>
-                            <input type="radio" name="mainColor" value="#000000" id="layoutOne" onChange={this.handleOptionChange} />
+                            <input type="radio" name="mainColor" value="color-one" id="layoutOne" onChange={this.handleOptionChange} />
                         </div>
                         <div className="radio main-color-div">
                             <label htmlFor="layoutTwo" className="btn-color layout-two"></label>
-                            <input type="radio" name="mainColor" value={"#468189"} id="layoutTwo" onChange={this.handleOptionChange} />
+                            <input type="radio" name="mainColor" value={"color-two"} id="layoutTwo" onChange={this.handleOptionChange} />
                         </div>
                         <div className="radio main-color-div">
                             <label htmlFor="layoutThree" className="btn-color layout-three"></label>
-                            <input type="radio" name="mainColor" value={"#3D348B"} id="layoutThree" onChange={this.handleOptionChange} />
+                            <input type="radio" name="mainColor" value={"color-three"} id="layoutThree" onChange={this.handleOptionChange} />
                         </div>
                         <div className="radio main-color-div">
                             <label htmlFor="layoutFour" className="btn-color layout-four"></label>
-                            <input type="radio" name="mainColor" value={"#706361"} id="layoutFour" onChange={this.handleOptionChange} />
+                            <input type="radio" name="mainColor" value={"color-four"} id="layoutFour" onChange={this.handleOptionChange} />
                         </div>
                         <div className="radio main-color-div">
                             <label htmlFor="layoutFive" className="btn-color layout-five"></label>
-                            <input type="radio" name="mainColor" value={"#F55536"} id="layoutFive" onChange={this.handleOptionChange} />
+                            <input type="radio" name="mainColor" value={"color-five"} id="layoutFive" onChange={this.handleOptionChange} />
                         </div>
                     </div>
-                    <input className="button" type="submit" value="Submit Chosen Colours" />
+                    
                 </form>
                 <div className="link-container">
                     <Link to={
