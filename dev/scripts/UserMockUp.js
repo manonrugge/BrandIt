@@ -50,24 +50,25 @@ class UserMockUp extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        const choice = this.state.choice;
-        const name = this.state.name;
-        const logo = this.state.logo;
-        const color = this.state.color;
-        const dbref4 = firebase.database().ref(`/users/${userId}/finalChoice`);
-        const dbref5 = firebase.database().ref(`/users/${userId}/finalName`);
-        const dbref6 = firebase.database().ref(`/users/${userId}/finalLogo`);
-        const dbref7 = firebase.database().ref(`/users/${userId}/finalColor`);
-        dbref4.set(choice);
-        dbref5.set(name);
-        dbref6.set(logo);
-        dbref7.set(color);
-        this.setState({
-            finalChoice: choice,
-            finalName: name,
-            finalLogo: logo,
-            finalColor: color
-        });
+        // const choice = this.state.choice;
+        // const name = this.state.name;
+        // const logo = this.state.logo;
+         const color = this.state.color;
+         const userId = firebase.auth().currentUser.uid;
+        // const dbref4 = firebase.database().ref(`/users/${userId}/finalChoice`);
+        // const dbref5 = firebase.database().ref(`/users/${userId}/finalName`);
+        // const dbref6 = firebase.database().ref(`/users/${userId}/finalLogo`);
+         const dbref7 = firebase.database().ref(`/users/${userId}/color`);
+        // dbref4.set(choice);
+        // dbref5.set(name);
+        // dbref6.set(logo);
+         dbref7.set(color);
+         this.setState({
+        //     finalChoice: choice,
+        //     finalName: name,
+        //     finalLogo: logo,
+             color: color
+         });
     }
     render() {
         return <div className="userMockUp-container">
