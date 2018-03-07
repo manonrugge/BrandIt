@@ -128,9 +128,9 @@ class UserInputText extends React.Component {
   render() {
     return <div className="uitWrapper clearfix">
       <form className="clearfix" onSubmit={this.handleSubmit}>
-        <label htmlFor="query">Your Company Name: </label>
+        <label htmlFor="query" className="mainFont">Your Company Name: </label>
         <input type="text" value={this.state.companyName} maxLength="15" onChange={this.handleChange} id="companyName" required />
-        <label htmlFor="query">Your key words: </label>
+        <label htmlFor="query" className="mainFont">Your key words: </label>
 
         <div className="searchHolder clearfix">
           <input type="search" value={this.state.query} onChange={this.handleChange} id="query" required />
@@ -140,9 +140,9 @@ class UserInputText extends React.Component {
 
         <div className="btnHolder">
           {this.state.searched === true ? (
-            <input type="submit" value="Search again" />
+            <input type="submit" value="Search again" className="link-btn"/>
           ) : (
-              <input type="submit" value="Search" />
+              <input type="submit" value="Search" className="link-btn"/>
             )}
         </div>
       </form>

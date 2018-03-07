@@ -65,9 +65,9 @@
     margin: 0 auto;
     text-align: center;
     height: 100vh;
-    @media (max-width: 450px) {
+    @media (max-width: 720px) {
         width: 80%;
-        padding-top: 20px;
+        padding-top: 50px;
     }
 }
 
@@ -77,6 +77,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding-top: 85px;
+    @media(max-width: 715px) {
+        padding-top: 200px;
+    }
+    @media(max-width: 480px) {
+        padding-top: 460px;
+    }
+
 }
 
 .link-container {
