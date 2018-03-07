@@ -1,0 +1,50 @@
+.uitWrapper {
+    width: 100%;
+
+    form {
+        width: 45%;
+        margin: 0 auto;
+        text-align: center;
+
+        label {
+            width: 100%;
+            margin: 0 auto;
+            float: left;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            float: left;
+            margin: 25px;
+        }
+
+        .searchHolder {
+            width: 100%;
+            border: 1px solid blue;
+            clear: both;
+        
+        input[type="search"] {
+            width: 32.3333%;
+            // margin: 10px;
+            // width: calc(32.3333% - 10px);
+            margin-top: 10px;
+            margin-bottom: 10px;
+            float: left;
+        }
+
+    }
+
+        .btnHolder {
+            text-align: center;
+            width: 100%;
+
+        input[type="submit"] {
+            width: 200px;
+            height: 25px;
+        }
+
+    }
+}
+
+
+}

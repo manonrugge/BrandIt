@@ -1,0 +1,20 @@
+.home-left, .home-right {
+    width: 50%;
+    display: inline-block;
+}
+
+.home-left{
+    img {
+        height: 220px;
+        width: 220px;
+    }   
+    p {
+        max-width: 350px;
+    }
+}
+
+.home {
+    max-width: 100%;
+    vertical-align: middle;
+    margin: 0 auto;
+}

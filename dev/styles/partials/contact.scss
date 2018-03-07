@@ -1,0 +1,46 @@
+.contact-container {
+    margin: 0 auto;
+}
+
+.contact {
+    max-width: 100%;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.contact-map iframe {
+    width: 400px;
+    height: 400px;
+}
+
+.contact-map, .contact-text {
+    max-width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contact-map {
+    float: right;
+}
+
+.contact-text {
+    padding-right: 200px;
+    float: left;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+    @media (max-width: 950px) {
+        padding-right: 100px;
+    }
+}
+
+.orangeText {
+    color: #e59319;
+}
+
+.contact-text a {
+    padding-right: 10px;
+    color: #e59319;
+}
+

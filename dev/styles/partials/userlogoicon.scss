@@ -1,0 +1,55 @@
+.uliWrapper {
+    width: 100%;
+    position: relative;
+   
+
+     h2 {
+        text-align: center;
+    }
+
+
+    .logoSelector {
+        width: 60%;
+        float: left;
+
+   
+.icon_ctn {
+    width: 33.3333%;
+    float: left;
+
+    .icon_btn {
+        border: 1px solid red;
+    }
+    }
+
+    }
+
+    .logoSelection {
+        width: 30%;
+        float: left;
+
+        .logoContainer {
+            width: 90%;
+            padding: 10px;
+
+
+            img{
+                width:100%;
+            }
+        }
+    }
+
+
+    .linkContainer {
+        width: 5%;
+        float: left;
+                position: absolute;
+                left: 95%;
+                top: 50%;
+
+                transform: translate(-50%, -50%);
+    }
+
+
+
+}
