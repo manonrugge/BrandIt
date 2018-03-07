@@ -11,20 +11,50 @@ $body: 'Helvetica', sans-serif;
 @import "partials/navBar.scss";
 @import "partials/links.scss";
 @import "partials/footer.scss";
+<<<<<<< HEAD
 @import "./node_modules/react-image-slider/lib/image-slider.css";
+=======
+@import "partials/about.scss";
+@import "partials/home.scss";
+@import "partials/signin.scss";
+@import "partials/contact.scss";
+@import "partials/slider.scss";
+@import "partials/userInputColor.scss";
+@import "partials/userinputtext.scss";
+@import "partials/userlogoicon.scss";
+@import "partials/mockUp.scss";
+@import "partials/logoMark.scss";
+
+>>>>>>> 2792b358860b6eb1b47dac52fcf77d1eda1dcdaa
 
 body {
     background-color: white;
 }
 
+.mainFont {
+    font-family: $heading;
+    color: $grey;
+}
+
+h1, h2 {
+    font-family: $heading;
+    color: $grey;
+}
+
 .app-container {
     margin: 20px;
     border: 2px solid $lightBlue;
+    @media (max-width: 500px) {
+        height: 100vh;
+        border: none;
+    }
 }
 
-.mainFont {
-    font-family: $heading;
-    color: $yellow;
+h3 {
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 p {
@@ -37,11 +67,37 @@ a {
     color:$grey;
 }
 
+button {
+    border: none;
+    background-color: none;
+    &:hover {
+        transform: scale(1.05);
+        transition: all .5s ease-in-out;
+    }
+}
+.link-btn, .button {
+    background: #e59319;
+    font-family: $heading;
+    border-radius: 12px;
+    padding: 5px 30px;
+    color: white;
+}
+
 .home-container,
 .about-container,
-.signin-container,
 .contact-container,
-.myBrands-container
+.myBrands-container,
+.uitWrapper, .uliWrapper, .signin, .userLogoMark-container
  {
     height: 100vh;
 }
+
+//HOMEPAGE STYLES 
+//SLIDER STYLES
+
+
+
+
+
+
+

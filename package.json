@@ -31,6 +31,10 @@
   },
   "dependencies": {
     "node-sass": "^4.7.1",
+<<<<<<< HEAD
     "react-image-slider": "^0.1.0"
+=======
+    "react-slick": "^0.20.0"
+>>>>>>> 2792b358860b6eb1b47dac52fcf77d1eda1dcdaa
   }
 }

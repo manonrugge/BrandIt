@@ -1,7 +1,6 @@
 .mainHeader {
-    margin: 20px 50px;
-    background-color: white;
-    box-shadow: 0px 2px 3px rgba(0,0,0,0.1);
+    margin: 20px 50px; 
+    height: 20px;  
 }
 
 .nav-left {
@@ -30,6 +29,24 @@ li {
             left: 0;
             top: 25px;
             width: 100%;
-            background: $yellow;
+            background: #e59319;
         }
+}
+
+@media (max-width: 460px) {
+    .nav-left {
+    float: none;
+    text-align: center;
+}
+
+.nav-right {
+    float: none;
+    text-align: center;
+    padding-top: 25px;
+}
+.mainHeader {
+    margin: 20px 20px;   
+}
+
+
 }

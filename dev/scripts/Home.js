@@ -5,6 +5,8 @@ import SignIn from "./SignIn";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import Slider from "react-slick";
+
 //inside the home component 
 
 //nav bar
@@ -12,31 +14,32 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 //button
 
 const Home = (props) => {
-    return (
-      <div className="home-container">
-        <div className="home">
-          <Gallery />
-          <img src="./dev/assets/brandit-logo.svg" alt="" />
+  return (
+    <div className="home-container">
+      <div className="home">
+        <div className="home-left">
+          <img src="./dev/assets/brandItLogoOrange.png" alt="" />
           <h2>Brandit</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
-            tenetur necessitatibus, explicabo doloremque ab eos dolorem id velit
-            obcaecati optio saepe reprehenderit facere provident nisi quos alias
-            harum illum distinctio?
-          </p>
+            Welcome to BrandIt - your one stop shop for bespoke logo's and custom branding. Get started below.
+            </p>
           {props.loggedIn ?
             <Link to={`/UserInputText`}>
-              <button className="getStarted"> Get Started </button>
+              <button className="link-btn"> Get Started </button>
             </Link>
             :
-            <Link to="/signin" className="link-btn"><button>Sign In</button></Link>
+            <Link to="/signin" className="link-btn"><button className="link-btn">Sign In</button></Link>
           }
         </div>
-        <Footer />
-        
+        <div className="home-right">
+          <Gallery />
+        </div>
       </div>
+      <Footer />
+
+    </div>
   )
-  }
+}
 
 
 export default Home;

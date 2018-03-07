@@ -12,7 +12,10 @@ import SignIn from './SignIn';
 import Contact from './Contact';
 import MyBrands from './MyBrands';
 import UserInputText from './UserInputText'
-import UserLogoIcon from "./UserLogoIcon";
+import UserLogoIcon from './UserLogoIcon';
+import UserInputColor from './UserInputColor';
+import UserLogoMark from './UserLogoMark';
+import UserMockUp from './UserMockUp';
 
 
 import {
@@ -71,7 +74,7 @@ class App extends React.Component {
         <div>
             <div className="app-container">
               {/* <NavBar signIn={this.state.signIn}/> */}
-            <NavBar loggedIn={this.state.loggedIn}/>
+              <NavBar loggedIn={this.state.loggedIn}/>
               {/* Adding paths to different "pages" */}
               <Route path="/" exact component={Home} />
               <Route path="/about" exact component={About} />
@@ -79,7 +82,10 @@ class App extends React.Component {
               <Route path="/signin" exact component={SignIn} />
               <Route path="/contact" exact component={Contact} /> 
               <Route path="/UserInputText" exact component={UserInputText} /> 
-               <Route path="/UserLogoIcon" exact component={UserLogoIcon} /> 
+              <Route path="/UserLogoIcon" exact component={UserLogoIcon} /> 
+              <Route path="/UserInputColor" exact component={UserInputColor} />
+              <Route path="/UserLogoMark" exact component={UserLogoMark} />
+              <Route path="/UserMockUp" exact component={UserMockUp} />
             </div>
         </div>
       </Router>
