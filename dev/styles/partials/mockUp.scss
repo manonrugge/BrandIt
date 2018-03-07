@@ -9,6 +9,7 @@
     }
     .tshirt{
         width: 700px;
+        padding-left: 0;
 
         @media (max-width: 750px) {
             width: 500px;
@@ -35,8 +36,8 @@
 
 .logoMark-container-tshirt {
     width: 200px;
-    top: 300px;
-    left: 250px;
+    top: 350px;
+    left: 400px;
 
     @media (max-width: 500px) {
         position: static;

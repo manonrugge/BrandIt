@@ -132,15 +132,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .mainHeader {
-  margin: 20px 50px;
-  background-color: white;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1); }
-
-.navWide {
-  display: block; }
-
-.navNarrow {
-  display: none; }
+  margin: 20px 50px; }
 
 .nav-left {
   float: left; }
@@ -164,11 +156,22 @@ li {
     margin: 0 auto;
     left: 0;
     top: 25px;
-    width: 100%; }
+    width: 100%;
+    background: #e59319; }
+
+@media (max-width: 460px) {
+  .nav-left {
+    float: none;
+    text-align: center; }
+  .nav-right {
+    float: none;
+    text-align: center;
+    padding-top: 25px; }
+  .mainHeader {
+    margin: 20px 20px; } }
 
 .home,
 .about,
-.signin,
 .myBrands,
 .contact {
   padding: 100px; }
@@ -176,6 +179,7 @@ li {
 .copyright {
   padding: 20px 0px;
   background-color: white;
+  color: #041a9b;
   text-align: center;
   margin: 0; }
 
@@ -234,13 +238,36 @@ li {
   vertical-align: middle;
   margin: 0 auto; }
 
+.orange-button {
+  background-color: #e59319 !important; }
+
+@media (max-width: 960px) {
+  .home-left, .home-right {
+    width: 100%;
+    display: inline-block; }
+  .home-right {
+    padding-top: 20px; }
+  .home-left {
+    text-align: center; }
+  .home {
+    padding: 50px; } }
+
 .contact-container {
   margin: 0 auto; }
+  @media (max-width: 850px) {
+    .contact-container {
+      padding-top: 60px; } }
 
 .contact {
-  max-width: 100%;
+  width: 100%;
   vertical-align: middle;
   margin: 0 auto; }
+  @media (max-width: 850px) {
+    .contact {
+      padding: 0 !important;
+      margin: 0 auto;
+      text-align: center;
+      top: 50%; } }
 
 .contact-map iframe {
   width: 400px;
@@ -253,6 +280,9 @@ li {
 
 .contact-map {
   float: right; }
+  @media (max-width: 850px) {
+    .contact-map {
+      display: none; } }
 
 .contact-text {
   padding-right: 200px;
@@ -263,6 +293,13 @@ li {
   @media (max-width: 950px) {
     .contact-text {
       padding-right: 100px; } }
+  @media (max-width: 850px) {
+    .contact-text {
+      padding-right: 0;
+      max-width: 100%;
+      float: none;
+      margin: 0 auto;
+      text-align: center; } }
 
 .orangeText {
   color: #e59319; }
@@ -272,8 +309,7 @@ li {
   color: #e59319; }
 
 .slider {
-  max-width: 100%;
-  border: 1px solid black; }
+  max-width: 100%; }
   .slider img {
     width: 100%;
     height: auto; }
@@ -324,10 +360,29 @@ li {
 .layout-five {
   background: #F55536; }
 
+.color-one {
+  color: #000000; }
+
+.color-two {
+  color: #468189; }
+
+.color-three {
+  color: #3D348B; }
+
+.color-four {
+  color: #706361; }
+
+.color-five {
+  color: #F55536; }
+
 .UserInputColorContainer {
   margin: 0 auto;
   text-align: center;
   height: 100vh; }
+  @media (max-width: 450px) {
+    .UserInputColorContainer {
+      width: 80%;
+      padding-top: 20px; } }
 
 .content-container {
   float: left;
@@ -342,12 +397,21 @@ li {
   left: 95%;
   transform: translate(-50%, -95%); }
 
+.colorContainer {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  border: 1px solid black; }
+  .colorContainer div {
+    width: 100%; }
+
 .uitWrapper {
   width: 100%; }
   .uitWrapper form {
     width: 45%;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    padding-top: 200px; }
     .uitWrapper form label {
       width: 100%;
       margin: 0 auto;
@@ -355,13 +419,15 @@ li {
     .uitWrapper form input[type="text"] {
       width: 100%;
       float: left;
-      margin: 25px; }
+      margin: 25px 0; }
+    .uitWrapper form input[type="search"]:nth-child(2) {
+      margin-left: 10px;
+      margin-right: 10px; }
     .uitWrapper form .searchHolder {
       width: 100%;
-      border: 1px solid blue;
       clear: both; }
       .uitWrapper form .searchHolder input[type="search"] {
-        width: 32.3333%;
+        width: 30%;
         margin-top: 10px;
         margin-bottom: 10px;
         float: left; }
@@ -371,28 +437,66 @@ li {
       .uitWrapper form .btnHolder input[type="submit"] {
         width: 200px;
         height: 25px; }
+  .uitWrapper .linkContainer {
+    width: 5%;
+    float: left;
+    position: absolute;
+    left: 95%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+@media (max-width: 460px) {
+  input#query, input#query2, input#query3 {
+    width: 100%;
+    float: none; }
+  input#query2 {
+    margin-left: 0; }
+  .uitWrapper form {
+    padding-top: 80px; } }
 
 .uliWrapper {
   width: 100%;
-  position: relative; }
+  position: relative;
+  padding-top: 100px; }
+  @media (max-width: 600px) {
+    .uliWrapper {
+      padding-top: 25px; } }
   .uliWrapper h2 {
     text-align: center; }
   .uliWrapper .logoSelector {
-    width: 60%;
-    float: left; }
+    width: calc(60% - 40px);
+    float: left;
+    margin-left: 40px; }
+    @media (max-width: 600px) {
+      .uliWrapper .logoSelector {
+        width: calc(90% - 40px);
+        float: none; } }
     .uliWrapper .logoSelector .icon_ctn {
-      width: 33.3333%;
-      float: left; }
+      width: 30%;
+      float: left;
+      padding: 5px; }
+      .uliWrapper .logoSelector .icon_ctn button {
+        background: white;
+        width: 100%; }
+        .uliWrapper .logoSelector .icon_ctn button img {
+          width: 100%; }
       .uliWrapper .logoSelector .icon_ctn .icon_btn {
         border: 1px solid red; }
   .uliWrapper .logoSelection {
-    width: 30%;
-    float: left; }
+    max-width: 30%;
+    float: left;
+    margin: 0 auto; }
+    @media (max-width: 600px) {
+      .uliWrapper .logoSelection {
+        float: none;
+        width: 100%; } }
     .uliWrapper .logoSelection .logoContainer {
       width: 90%;
-      padding: 10px; }
+      padding: 10px;
+      margin: 0 auto; }
       .uliWrapper .logoSelection .logoContainer img {
-        width: 100%; }
+        width: 100%;
+        background: white; }
   .uliWrapper .linkContainer {
     width: 5%;
     float: left;
@@ -400,6 +504,27 @@ li {
     left: 95%;
     top: 50%;
     transform: translate(-50%, -50%); }
+
+@media (max-width: 1230px) {
+  .icon_ctn {
+    width: 50%; } }
+
+@media (max-width: 960px) {
+  .logoSelection {
+    max-width: 30%;
+    float: left;
+    margin: 0 auto; }
+    .logoSelection .logoContainer {
+      width: 70%;
+      padding: 10px;
+      margin: 0 auto; }
+      .logoSelection .logoContainer img {
+        width: 70%;
+        background: white; } }
+
+@media (max-width: 600px) {
+  .logoContainer {
+    width: 60%; } }
 
 .tshirt-container,
 .stationary-container {
@@ -412,7 +537,8 @@ li {
     padding-bottom: 50px; }
   .tshirt-container .tshirt,
   .stationary-container .tshirt {
-    width: 700px; }
+    width: 700px;
+    padding-left: 0; }
     @media (max-width: 750px) {
       .tshirt-container .tshirt,
       .stationary-container .tshirt {
@@ -437,8 +563,8 @@ li {
 
 .logoMark-container-tshirt {
   width: 200px;
-  top: 300px;
-  left: 250px; }
+  top: 350px;
+  left: 400px; }
   @media (max-width: 500px) {
     .logoMark-container-tshirt {
       position: static;
@@ -602,17 +728,25 @@ a {
   font-family: "Merriweather", serif;
   color: #666666; }
 
-button, .button {
+button {
+  border: none;
+  background-color: none; }
+  button:hover {
+    transform: scale(1.05);
+    transition: all .5s ease-in-out; }
+
+.link-btn, .button {
   background: #e59319;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Merriweather", serif;
   border-radius: 12px;
-  padding: 5px 30px; }
+  padding: 5px 30px;
+  color: white; }
 
 .home-container,
 .about-container,
-.signin-container,
 .contact-container,
-.myBrands-container {
+.myBrands-container,
+.uitWrapper, .uliWrapper {
   height: 100vh; }
 
 .about {
@@ -656,11 +790,20 @@ button, .button {
 
 .contact-container {
   margin: 0 auto; }
+  @media (max-width: 850px) {
+    .contact-container {
+      padding-top: 60px; } }
 
 .contact {
-  max-width: 100%;
+  width: 100%;
   vertical-align: middle;
   margin: 0 auto; }
+  @media (max-width: 850px) {
+    .contact {
+      padding: 0 !important;
+      margin: 0 auto;
+      text-align: center;
+      top: 50%; } }
 
 .contact-map iframe {
   width: 400px;
@@ -673,6 +816,9 @@ button, .button {
 
 .contact-map {
   float: right; }
+  @media (max-width: 850px) {
+    .contact-map {
+      display: none; } }
 
 .contact-text {
   padding-right: 200px;
@@ -683,6 +829,13 @@ button, .button {
   @media (max-width: 950px) {
     .contact-text {
       padding-right: 100px; } }
+  @media (max-width: 850px) {
+    .contact-text {
+      padding-right: 0;
+      max-width: 100%;
+      float: none;
+      margin: 0 auto;
+      text-align: center; } }
 
 .orangeText {
   color: #e59319; }
@@ -694,6 +847,7 @@ button, .button {
 .copyright {
   padding: 20px 0px;
   background-color: white;
+  color: #041a9b;
   text-align: center;
   margin: 0; }
 
@@ -713,9 +867,22 @@ button, .button {
   vertical-align: middle;
   margin: 0 auto; }
 
+.orange-button {
+  background-color: #e59319 !important; }
+
+@media (max-width: 960px) {
+  .home-left, .home-right {
+    width: 100%;
+    display: inline-block; }
+  .home-right {
+    padding-top: 20px; }
+  .home-left {
+    text-align: center; }
+  .home {
+    padding: 50px; } }
+
 .home,
 .about,
-.signin,
 .myBrands,
 .contact {
   padding: 100px; }
@@ -784,7 +951,8 @@ button, .button {
     padding-bottom: 50px; }
   .tshirt-container .tshirt,
   .stationary-container .tshirt {
-    width: 700px; }
+    width: 700px;
+    padding-left: 0; }
     @media (max-width: 750px) {
       .tshirt-container .tshirt,
       .stationary-container .tshirt {
@@ -809,8 +977,8 @@ button, .button {
 
 .logoMark-container-tshirt {
   width: 200px;
-  top: 300px;
-  left: 250px; }
+  top: 350px;
+  left: 400px; }
   @media (max-width: 500px) {
     .logoMark-container-tshirt {
       position: static;
@@ -890,15 +1058,7 @@ button, .button {
     top: 40px; }
 
 .mainHeader {
-  margin: 20px 50px;
-  background-color: white;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1); }
-
-.navWide {
-  display: block; }
-
-.navNarrow {
-  display: none; }
+  margin: 20px 50px; }
 
 .nav-left {
   float: left; }
@@ -922,7 +1082,19 @@ li {
     margin: 0 auto;
     left: 0;
     top: 25px;
-    width: 100%; }
+    width: 100%;
+    background: #e59319; }
+
+@media (max-width: 460px) {
+  .nav-left {
+    float: none;
+    text-align: center; }
+  .nav-right {
+    float: none;
+    text-align: center;
+    padding-top: 25px; }
+  .mainHeader {
+    margin: 20px 20px; } }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -1058,8 +1230,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .slider {
-  max-width: 100%;
-  border: 1px solid black; }
+  max-width: 100%; }
   .slider img {
     width: 100%;
     height: auto; }
@@ -1110,10 +1281,29 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 .layout-five {
   background: #F55536; }
 
+.color-one {
+  color: #000000; }
+
+.color-two {
+  color: #468189; }
+
+.color-three {
+  color: #3D348B; }
+
+.color-four {
+  color: #706361; }
+
+.color-five {
+  color: #F55536; }
+
 .UserInputColorContainer {
   margin: 0 auto;
   text-align: center;
   height: 100vh; }
+  @media (max-width: 450px) {
+    .UserInputColorContainer {
+      width: 80%;
+      padding-top: 20px; } }
 
 .content-container {
   float: left;
@@ -1128,12 +1318,21 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   left: 95%;
   transform: translate(-50%, -95%); }
 
+.colorContainer {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  border: 1px solid black; }
+  .colorContainer div {
+    width: 100%; }
+
 .uitWrapper {
   width: 100%; }
   .uitWrapper form {
     width: 45%;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    padding-top: 200px; }
     .uitWrapper form label {
       width: 100%;
       margin: 0 auto;
@@ -1141,13 +1340,15 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     .uitWrapper form input[type="text"] {
       width: 100%;
       float: left;
-      margin: 25px; }
+      margin: 25px 0; }
+    .uitWrapper form input[type="search"]:nth-child(2) {
+      margin-left: 10px;
+      margin-right: 10px; }
     .uitWrapper form .searchHolder {
       width: 100%;
-      border: 1px solid blue;
       clear: both; }
       .uitWrapper form .searchHolder input[type="search"] {
-        width: 32.3333%;
+        width: 30%;
         margin-top: 10px;
         margin-bottom: 10px;
         float: left; }
@@ -1157,28 +1358,66 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
       .uitWrapper form .btnHolder input[type="submit"] {
         width: 200px;
         height: 25px; }
+  .uitWrapper .linkContainer {
+    width: 5%;
+    float: left;
+    position: absolute;
+    left: 95%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+@media (max-width: 460px) {
+  input#query, input#query2, input#query3 {
+    width: 100%;
+    float: none; }
+  input#query2 {
+    margin-left: 0; }
+  .uitWrapper form {
+    padding-top: 80px; } }
 
 .uliWrapper {
   width: 100%;
-  position: relative; }
+  position: relative;
+  padding-top: 100px; }
+  @media (max-width: 600px) {
+    .uliWrapper {
+      padding-top: 25px; } }
   .uliWrapper h2 {
     text-align: center; }
   .uliWrapper .logoSelector {
-    width: 60%;
-    float: left; }
+    width: calc(60% - 40px);
+    float: left;
+    margin-left: 40px; }
+    @media (max-width: 600px) {
+      .uliWrapper .logoSelector {
+        width: calc(90% - 40px);
+        float: none; } }
     .uliWrapper .logoSelector .icon_ctn {
-      width: 33.3333%;
-      float: left; }
+      width: 30%;
+      float: left;
+      padding: 5px; }
+      .uliWrapper .logoSelector .icon_ctn button {
+        background: white;
+        width: 100%; }
+        .uliWrapper .logoSelector .icon_ctn button img {
+          width: 100%; }
       .uliWrapper .logoSelector .icon_ctn .icon_btn {
         border: 1px solid red; }
   .uliWrapper .logoSelection {
-    width: 30%;
-    float: left; }
+    max-width: 30%;
+    float: left;
+    margin: 0 auto; }
+    @media (max-width: 600px) {
+      .uliWrapper .logoSelection {
+        float: none;
+        width: 100%; } }
     .uliWrapper .logoSelection .logoContainer {
       width: 90%;
-      padding: 10px; }
+      padding: 10px;
+      margin: 0 auto; }
       .uliWrapper .logoSelection .logoContainer img {
-        width: 100%; }
+        width: 100%;
+        background: white; }
   .uliWrapper .linkContainer {
     width: 5%;
     float: left;
@@ -1186,3 +1425,24 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     left: 95%;
     top: 50%;
     transform: translate(-50%, -50%); }
+
+@media (max-width: 1230px) {
+  .icon_ctn {
+    width: 50%; } }
+
+@media (max-width: 960px) {
+  .logoSelection {
+    max-width: 30%;
+    float: left;
+    margin: 0 auto; }
+    .logoSelection .logoContainer {
+      width: 70%;
+      padding: 10px;
+      margin: 0 auto; }
+      .logoSelection .logoContainer img {
+        width: 70%;
+        background: white; } }
+
+@media (max-width: 600px) {
+  .logoContainer {
+    width: 60%; } }

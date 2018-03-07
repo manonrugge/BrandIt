@@ -25,10 +25,10 @@ const Home = (props) => {
             </p>
           {props.loggedIn ?
             <Link to={`/UserInputText`}>
-              <button className="getStarted"> Get Started </button>
+              <button className="link-btn"> Get Started </button>
             </Link>
             :
-            <Link to="/signin" className="link-btn"><button>Sign In</button></Link>
+            <Link to="/signin" className="link-btn"><button className="link-btn">Sign In</button></Link>
           }
         </div>
         <div className="home-right">

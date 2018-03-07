@@ -26,7 +26,6 @@ body {
     background-color: white;
 }
 
-
 .mainFont {
     font-family: $heading;
     color: $grey;
@@ -62,18 +61,27 @@ a {
     color:$grey;
 }
 
-button, .button {
+button {
+    border: none;
+    background-color: none;
+    &:hover {
+        transform: scale(1.05);
+        transition: all .5s ease-in-out;
+    }
+}
+.link-btn, .button {
     background: #e59319;
-    font-family: $body;
+    font-family: $heading;
     border-radius: 12px;
     padding: 5px 30px;
+    color: white;
 }
 
 .home-container,
 .about-container,
-.signin-container,
 .contact-container,
-.myBrands-container
+.myBrands-container,
+.uitWrapper, .uliWrapper
  {
     height: 100vh;
 }

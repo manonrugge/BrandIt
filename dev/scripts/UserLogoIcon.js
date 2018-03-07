@@ -72,9 +72,9 @@ class UserLogoIcon extends React.Component {
       <div className="linkContainer">
 
         <Link to={`/UserInputColor`}>
-          <button>
+          
             <img src="./dev/assets/arrow.svg" alt="" />
-          </button>
+          
         </Link>
       </div>
 
