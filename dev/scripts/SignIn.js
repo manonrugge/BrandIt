@@ -65,10 +65,10 @@ class SignIn extends React.Component {
                     {this.state.loggedIn ?
                         <Home loggedIn={this.state.loggedIn} />
                         :
-                        <div>
+                        <div className="log-in-launch">
                             <h1>Brand It</h1>
-                            <h4>Please sign in:</h4>
-                            <button onClick={this.signIn}>Google</button>
+                            <h4>Please sign in with:</h4>
+                            <button className="link-btn" onClick={this.signIn}>Google</button>
                         </div>
                     }
                 </div>

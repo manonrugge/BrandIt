@@ -13,6 +13,7 @@ $body: 'Helvetica', sans-serif;
 @import "partials/footer.scss";
 @import "partials/about.scss";
 @import "partials/home.scss";
+@import "partials/signin.scss";
 @import "partials/contact.scss";
 @import "partials/slider.scss";
 @import "partials/userInputColor.scss";
@@ -81,7 +82,7 @@ button {
 .about-container,
 .contact-container,
 .myBrands-container,
-.uitWrapper, .uliWrapper
+.uitWrapper, .uliWrapper, .signin
  {
     height: 100vh;
 }

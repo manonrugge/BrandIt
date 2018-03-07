@@ -252,6 +252,9 @@ li {
   .home {
     padding: 50px; } }
 
+.log-in-launch {
+  padding: 100px; }
+
 .contact-container {
   margin: 0 auto; }
   @media (max-width: 850px) {
@@ -746,7 +749,7 @@ button {
 .about-container,
 .contact-container,
 .myBrands-container,
-.uitWrapper, .uliWrapper {
+.uitWrapper, .uliWrapper, .signin {
   height: 100vh; }
 
 .about {
@@ -1228,6 +1231,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+.log-in-launch {
+  padding: 100px; }
 
 .slider {
   max-width: 100%; }
